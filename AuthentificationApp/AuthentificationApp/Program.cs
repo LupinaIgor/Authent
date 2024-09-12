@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using AuthentificationApp.Data;
+using Microsoft.AspNetCore.Authorization;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,10 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+//builder.Services.AddAuthentication("Bearer")  // добавлено вручную
+//    .AddJwtBearer();
+
 
 var app = builder.Build();
 
@@ -39,6 +45,11 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Map("/must_auth", [Authorize]() => "Hello Autorization!");
+app.Map("no_auth", () => "Hello,Guest!");
+
+
 app.MapRazorPages();
 
 app.Run();

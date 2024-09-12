@@ -287,3 +287,4 @@ C:\Users\igorl\RiderProjects\Authent\AuthentificationApp\AuthentificationApp\obj
 C:\Users\igorl\RiderProjects\Authent\AuthentificationApp\AuthentificationApp\obj\Debug\net8.0\AuthentificationApp.pdb
 C:\Users\igorl\RiderProjects\Authent\AuthentificationApp\AuthentificationApp\obj\Debug\net8.0\AuthentificationApp.genruntimeconfig.cache
 C:\Users\igorl\RiderProjects\Authent\AuthentificationApp\AuthentificationApp\obj\Debug\net8.0\ref\AuthentificationApp.dll
+C:\Users\igorl\RiderProjects\Authent\AuthentificationApp\AuthentificationApp\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
